@@ -1,6 +1,6 @@
 {
   "name": "sync-foreach",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Manual foreach for those async functions",
   "main": "sync-foreach.js",
   "scripts": {
@@ -15,5 +15,9 @@
     "browser"
   ],
   "author": "saenzo",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HectorSDevelopment/sync-foreach.git"
+  }
 }

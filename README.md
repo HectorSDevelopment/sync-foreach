@@ -38,7 +38,7 @@ syncforeach({foo: 1, bar: 2}, (next, value, key, object) => {
     // Next: Get the next item
     // Value: 1, 2
     // Key: foo, bar
-    // Object: ['foo', 'bar']
+    // Object: {foo: 1, bar: 2}
     
     // Do some async function, task, etc...
     asyncFunction(() => {
