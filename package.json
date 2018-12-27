@@ -1,0 +1,19 @@
+{
+  "name": "sync-foreach",
+  "version": "0.0.1",
+  "description": "Manual foreach for those async functions",
+  "main": "sync-foreach.js",
+  "scripts": {
+    "test": "node sync-foreach"
+  },
+  "keywords": [
+    "for",
+    "foreach",
+    "each",
+    "sync",
+    "node.js",
+    "browser"
+  ],
+  "author": "saenzo",
+  "license": "ISC"
+}
