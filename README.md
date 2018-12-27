@@ -1,5 +1,5 @@
 
-# Sync Foreach - Beta
+# Sync Foreach
 
 ## Simple to use
 
