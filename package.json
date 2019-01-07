@@ -1,6 +1,6 @@
 {
   "name": "sync-foreach",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Manual foreach for those async functions",
   "main": "sync-foreach.js",
   "scripts": {
