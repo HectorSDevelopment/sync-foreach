@@ -1,26 +1,37 @@
 module.exports = (arr, fn) => {
-    if (toString.call(fn) !== '[object Function]') {
-        throw new TypeError('Iterator must be a function');
+  if (toString.call(fn) !== '[object Function]') {
+    throw new TypeError('Iterator must be a function')
+  }
+
+  let keys = Object.keys(arr)
+  let done
+
+  const next = option => {
+    let index = keys.shift()
+
+    if (!isNaN(index)) {
+      index = +index
     }
 
-    let keys = Object.keys(arr);
-    let done;
+    switch (option) {
+      case 'break':
+      case 'done':
+        arr[index] = undefined
+        break
+    }
 
-    const next = () => {
-        let index = keys.shift();
+    if (arr[index] !== undefined) {
+      fn(next, arr[index], index, arr)
+    } else if (done !== undefined) {
+      done()
+    }
+  };
 
-        if (!isNaN(index)) {
-            index = +index;
-        }
+  setTimeout(() => next(), 1)
 
-        if (arr[index] !== undefined) {
-            fn(next, arr[index], index, arr);
-        } else if (done !== undefined) {
-            done();
-        }
-    };
-
-    setTimeout(() => next(), 1);
-
-    return { done (cb) { done = cb; } };
-};
+  return {
+    done(cb) {
+      done = cb
+    }
+  }
+}

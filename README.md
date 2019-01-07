@@ -26,6 +26,9 @@ syncforeach(['foo', 'bar'], (next, value, index, array) => {
     asyncFunction(() => {
         // And next
         next()
+
+        // For stop the loop pass 'break' or 'done' as parameter
+        // next('break')
     })
 }).done(() => {
     console.log('completed')
@@ -44,6 +47,9 @@ syncforeach({foo: 1, bar: 2}, (next, value, key, object) => {
     asyncFunction(() => {
         // And next
         next()
+
+        // For stop the loop pass 'break' or 'done' as parameter
+        // next('done')
     })
 }).done(() => {
     console.log('completed')
