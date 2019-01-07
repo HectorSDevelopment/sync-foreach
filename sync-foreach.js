@@ -1,4 +1,6 @@
-module.exports = (arr, fn) => {
+const isBrowser = typeof window !== 'undefined' && typeof window.document !== 'undefined';
+
+const syncforeach = (arr, fn) => {
   if (toString.call(fn) !== '[object Function]') {
     throw new TypeError('Iterator must be a function')
   }
@@ -34,4 +36,10 @@ module.exports = (arr, fn) => {
       done = cb
     }
   }
+}
+
+if (isBrowser) {
+  window.syncforeach = syncforeach
+} else {
+  module.exports = syncforeach
 }

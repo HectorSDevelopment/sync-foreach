@@ -11,7 +11,13 @@ in a easy way
 ### syncforeach(element, function, [context])
 
 ```js
+// Node
 const syncforeach = require('sync-foreach')
+```
+
+```html
+Browser
+<script src="/node_modules/sync-foreach/sync-foreach.js"></script>
 ```
 
 ### Array
